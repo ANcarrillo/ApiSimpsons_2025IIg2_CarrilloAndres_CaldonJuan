@@ -2,7 +2,7 @@ nav {
     background-color: #06b8d8;
     overflow: hidden;
     height: calc(100vh - 150px);
-    width: 1000px;
+    width: 700px;
     align-items: flex-end;
 
     ul {

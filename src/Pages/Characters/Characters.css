@@ -1,0 +1,99 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+}
+.pagination-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #ea6f66 0%, #a24b4b 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(158, 66, 66, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+pagination-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+}
+
+.pagination-btn:hover::before {
+    left: 100%;
+}
+
+/* Hover */
+.pagination-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(135, 55, 53, 0.5);
+}
+
+/* Click */
+.pagination-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Deshabilitado */
+.pagination-btn:disabled {
+    background: linear-gradient(135deg, #ccc 0%, #999 100%);
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+}
+
+.pagination-btn:disabled:hover {
+    transform: none;
+}
+
+/* Iconos */
+.btn-icon {
+    font-size: 1.3rem;
+}
+
+/* Animación flecha izquierda */
+.prev-btn:hover .btn-icon {
+    animation: slideLeft 0.6s ease infinite;
+}
+
+/* Animación flecha derecha */
+.next-btn:hover .btn-icon {
+    animation: slideRight 0.6s ease infinite;
+}
+
+@keyframes slideLeft {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+}
+
+@keyframes slideRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+/* Info de página (opcional) */
+.page-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
