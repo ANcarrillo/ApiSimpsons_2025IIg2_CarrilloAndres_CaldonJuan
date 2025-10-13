@@ -24,7 +24,7 @@ function App() {
               <Route path="/personaje/:id" element={<CharacterDetail />} />
               <Route path="/episodios" element={<Episodes />} />
               <Route path="/localizacion" element={<Locations />} />
-              <Route path="*" element={<div>404 - Página no encontrada</div>} />
+              
 
             </Routes>
           </div>
