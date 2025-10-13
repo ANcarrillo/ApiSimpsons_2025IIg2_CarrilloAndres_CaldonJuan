@@ -16,6 +16,14 @@
     width: 100%;
     height: auto;
     background: url('./assets/FondoHome.jpg') no-repeat center center/cover;
-
+    
 }
 
+@media(max-width:768px){
+    #container-pages{
+        flex-direction: column-reverse;
+    }
+    #container{
+        height: 100vh;
+    }
+}

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
         <p>© 2025 the simpsons api. All rights reserved.</p>
-        <p> by Andrés Carrillo</p>
+        <p> by Andrés Carrillo & Juan Caldon</p>
     </footer>
   )
 }

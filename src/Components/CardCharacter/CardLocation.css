@@ -1,0 +1,23 @@
+.imagenLugar {
+    background-color: transparent;
+    height: 120px;
+    padding: 20px;
+}
+
+.card {
+    width: 265px;
+    aspect-ratio: 1/1;
+}
+
+@media (min-width: 1024px) {
+    .imagenLugar {
+        background-color: transparent;
+        height: 200px;
+        padding: 20px;
+    }
+
+    .card {
+        width: 345px;
+        aspect-ratio: 1/1;
+    }
+}

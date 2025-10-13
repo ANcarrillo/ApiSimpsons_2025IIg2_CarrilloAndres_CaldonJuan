@@ -6,6 +6,7 @@
     width: 100%;
     padding: 2rem;
 }
+
 .pagination-btn {
     display: flex;
     align-items: center;
@@ -23,6 +24,7 @@
     position: relative;
     overflow: hidden;
 }
+
 pagination-btn::before {
     content: '';
     position: absolute;
@@ -77,13 +79,27 @@ pagination-btn::before {
 }
 
 @keyframes slideLeft {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(-5px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
 }
 
 @keyframes slideRight {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(5px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
 }
 
 /* Info de página (opcional) */
@@ -96,4 +112,49 @@ pagination-btn::before {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     font-weight: 600;
+}
+
+.contenedor {
+    background-Color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    overflow-Y: auto;
+}
+
+.contenedor-imagenes {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (min-width: 480px) {
+    .contenedor-imagenes {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        height: calc(100vh - 15vh);
+    }
+}
+
+@media (min-width: 1024px) {
+    .contenedor {
+        height: calc(100vh - 20vh);
+    }
 }

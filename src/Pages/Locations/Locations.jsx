@@ -38,7 +38,7 @@ const Locations = () => {
 
     return (
 
-        <div style={{ backgroundColor: 'lightgreen', height: 'calc(100vh - 150px)', width: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '20px', overflowY: 'scroll' }}>
+        <div className='contenedorLugares'>
             {
                 characters.length > 0 ? characters.map(
                     character => <CardCharacters key={character.id} data={character} />

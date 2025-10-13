@@ -18,7 +18,6 @@ function App() {
         <Header />
         <div id='container-pages'>
           <div id='container'>
-
             <Routes>
 
               <Route path="/personajes" element={<Characters />} />

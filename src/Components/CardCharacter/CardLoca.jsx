@@ -4,20 +4,21 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
+import './CardLocation.css'
 
 const CardLoca = ({ data }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className='card'>
       <CardActionArea>
         <CardMedia
+        className='imagenLugar'
           component="img"
-          height="200"
           image={`https://cdn.thesimpsonsapi.com/500${data.image_path}`}
           alt={"Imagen del personaje " + data.name}
-          sx={{ objectFit: 'contain', bgcolor: '#f50c0c88' }}
+          sx={{ objectFit: 'contain' }}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography className='name' gutterBottom variant="h5" component="div" id="Text">
             {data.name}
           </Typography>
           
