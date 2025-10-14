@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import CardCharacters from '../../Components/CardCharacter/CardLoca'
 import './Locations.css'
-
+import gifCarga from '../../assets/SimpsonsCarga.gif'
 
 const Locations = () => {
 
@@ -42,7 +42,7 @@ const Locations = () => {
             {
                 characters.length > 0 ? characters.map(
                     character => <CardCharacters key={character.id} data={character} />
-                ) : <p>Cargando...</p>
+                ) : <img src={gifCarga} alt="Cargando" />
             }
             <div className="pagination-container">
                 <button

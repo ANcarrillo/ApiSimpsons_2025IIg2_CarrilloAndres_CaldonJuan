@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import CardCharacters from '../../Components/CardCharacter/AcorEpisodes'
 import './Episodes.css'
+import gifCarga from '../../assets/SimpsonsCarga.webp'
 
 
 const Episodes = () => {
@@ -42,7 +43,7 @@ const Episodes = () => {
             {
                 characters.length > 0 ? characters.map(
                     character => <CardCharacters key={character.id} data={character} />
-                ) : <p>Cargando...</p>
+                ) : <img src={gifCarga} alt="Cargando" />
             }
             <div className="pagination-container">
                 <button

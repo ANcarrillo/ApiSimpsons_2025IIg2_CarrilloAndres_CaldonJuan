@@ -16,7 +16,12 @@
     width: 100%;
     height: auto;
     background: url('./assets/FondoHome.jpg') no-repeat center center/cover;
-    
+    h1{
+        font-size: 7rem;
+        color: rgb(251, 255, 0);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-top: 20px;
+    }
 }
 
 @media(max-width:768px){
@@ -25,5 +30,13 @@
     }
     #container{
         height: 100vh;
+    }
+}
+@media (max-width: 440px) {
+    #container {
+        background: url('./assets/Imagen404phone.png') no-repeat center center/cover;
+        h1{
+            display: none;
+        }
     }
 }

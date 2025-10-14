@@ -6,6 +6,7 @@ import Characters from './Pages/Characters/Characters'
 import CharacterDetail from './Pages/CharacterDetail/CharacterDetail'
 import Locations from './Pages/Locations/Locations'
 import Episodes from './Pages/Episodes/Episodes'
+import Home from './Pages/Home/Home'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 
@@ -24,7 +25,7 @@ function App() {
               <Route path="/personaje/:id" element={<CharacterDetail />} />
               <Route path="/episodios" element={<Episodes />} />
               <Route path="/localizacion" element={<Locations />} />
-              
+              <Route path="*" element={<div><h1 id='Text'>404</h1></div>} />
 
             </Routes>
           </div>

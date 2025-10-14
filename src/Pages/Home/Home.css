@@ -1,0 +1,21 @@
+.fondo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-image: url(../../assets/FondoHome.jpg);
+    h1{
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .fondo{
+        background-image: url(../../assets/Imagen404phone.png);
+        h1{
+            display: none;
+        }
+    }
+}

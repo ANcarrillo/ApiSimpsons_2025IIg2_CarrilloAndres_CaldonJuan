@@ -39,6 +39,10 @@ pagination-btn::before {
 .pagination-btn:hover::before {
     left: 100%;
 }
+.Carga{
+    width: 200px;
+    height: 200px;
+}
 
 /* Hover */
 .pagination-btn:hover {

@@ -5,6 +5,8 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import "./Characters.css";
 import { useNavigate } from "react-router-dom";
+import gifCarga from '../../assets/7SJ1.gif';
+
 
 const Characters = () => {
   const navigate = useNavigate();
@@ -15,11 +17,11 @@ const Characters = () => {
 
   const buscarPersonaje = () => {
     fetch(`https://thesimpsonsapi.com/api/characters/${searchId}`)
-      .then((response) => response.json())
+      .then((response) => (!response.ok ? navigate(`/*`) : response.json()))
       .then((data) => {
         navigate(`/personaje/${data.id}`);
       })
-      .catch((error) => navigate(`/*`));
+      .catch((error) => navigate(`/`));
   };
   useEffect(() => {
     fetch(`https://thesimpsonsapi.com/api/characters?page=${currentPage}`)
@@ -57,7 +59,7 @@ const Characters = () => {
             margin: "10px",
             display: "flex",
             alignItems: "center",
-            flexWrap:"wrap",
+            flexWrap: "wrap",
           }}
           noValidate
           autoComplete="off"
@@ -91,7 +93,8 @@ const Characters = () => {
           </Button>
         </Box>
       </div>
-      <div className="contenedor-imagenes"
+      <div
+        className="contenedor-imagenes"
         style={{
           display: "flex",
           flexWrap: "wrap",
@@ -105,7 +108,7 @@ const Characters = () => {
             <CardCharacters key={character.id} data={character} />
           ))
         ) : (
-          <p>Cargando...</p>
+          <img src={gifCarga} alt="pantallaCarga" />
         )}
         <div className="pagination-container">
           <button
