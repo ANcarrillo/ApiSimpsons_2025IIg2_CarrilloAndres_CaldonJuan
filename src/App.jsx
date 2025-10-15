@@ -25,7 +25,7 @@ function App() {
               <Route path="/personaje/:id" element={<CharacterDetail />} />
               <Route path="/episodios" element={<Episodes />} />
               <Route path="/localizacion" element={<Locations />} />
-              <Route path="*" element={<div><h1 id='Text'>404</h1></div>} />
+              <Route path="*" element={<div><h1 id='Text'>Simpsons</h1></div>} />
 
             </Routes>
           </div>
